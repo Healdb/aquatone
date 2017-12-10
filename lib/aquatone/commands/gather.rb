@@ -35,7 +35,7 @@ module Aquatone
         if !Dir.exists?(File.join(Aquatone::AQUATONE_ROOT, "node_modules"))
           output("Installing Nightmare.js package, please wait...")
           Dir.chdir(Aquatone::AQUATONE_ROOT) do
-            if system("npm install nightmare >/dev/null 2>&1")
+            if system("npm install nightmare")
               output(" Done\n\n")
             else
               output(red(" Failed\n"))
